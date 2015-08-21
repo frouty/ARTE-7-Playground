@@ -391,6 +391,7 @@ dico = {
 ## ------
 print "---- TEST JSON MODULE ----"
 obj_json=str(dico)
+print obj_json
 obj=json.loads(obj_json)
 #print obj
 

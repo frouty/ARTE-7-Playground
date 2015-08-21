@@ -2,6 +2,7 @@
 import json
 false=False
 true=True
+
 dico = {
         "videoSearchParams":{
                             "detailLevel":"L1",
