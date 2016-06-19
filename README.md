@@ -1,58 +1,59 @@
-ARTE-7-PLAYGROUND
+ARTE-Downloader
 =================
 
-Current version: **1.4**.
+Current version: **2.5**.
+
+CONTRIBUTORS
+-----------
+
+[@Bumbadawg](https://github.com/Bumbadawg), [@GuGuss](https://github.com/GuGuss), @aug-riedinger, @maxlath, @uahim
 
 DESCRIPTION
 -----------
 
-This script allows you to get MP4 URLs of any video on [ARTE+7 website](http://www.arte.tv/guide/fr/plus7).
+This script works as a browser extension to download any video on [ARTE website](http://www.arte.tv/).
 
-**Note**: User scripts are very easy to install on your browser ^^.
+Go to a video on [ARTE website](http://www.arte.tv/) and you should see buttons under a video:
 
-![](sample.png)
+* **Select** the language version: french, german, english, spanish.
+* **Select** the quality (from 216p up to 720p).
+* **Download** the video or its description.
 
-INSTALL - GOOGLE CHROME
------------------------
+In case of a livestream, there are 2 possibilities:
+* Download directly the MP4 video.
+* Open [VLC](http://www.videolan.org/vlc/) > Open its convert tool (CTRL+R) > Network tab > Copy the link > Convert/Save the video.
 
-* Download the [arte-downloader.user.js](../../raw/master/arte-downloader.user.js) file on your computer.
+![](http://i.imgur.com/GjvVHLv.jpg)
 
-* Open Google Chrome browser and go to the extension page at: __chrome://extensions__
+INSTALLATION
+------------
+### Step 1 : Install a script manager
+* [Firefox users] Install the [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) script manager.
+* [Chrome users] Install the [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) script manager.
+* [Opera users] Install the [Violent monkey](https://addons.opera.com/fr/extensions/details/violent-monkey) script manager.
 
-* Simply drag and drop the ``arte-downloader.user.js`` file on this page.
+### Step 2 : Install the script
+* Go to [arte-downloader.user.js](../../raw/master/arte-downloader.user.js): *Install* and you're all set!
 
-
-**Note**: To upgrade to a newer version, you need to redo those steps.
-
-INSTALL - FIREFOX & OTHER
--------------------------
-
-* Install the [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) addon that will manage the script
-
-* Go to [arte-downloader.user.js](../../raw/master/arte-downloader.user.js): Greasemonkey should open a dialog window to allow the script installation. Click *Install* and you're all set!
-
-
-USAGE
------
-
-Go to a video on [ARTE+7 website](http://www.arte.tv/guide/fr/plus7) and you should see 3 buttons under the video:
-
-* Download **High** Quality
-* Download **Standard** Quality
-* Download **Low** Quality
+**Note** To get the latest version: either update through your script manager, or redo step 2 ;-)
 
 FAQ
 ---
 
-**Why should I use this script?**
+**Why should I use this script ?**
 
-If you are like me, and often travel with poor Internet connections, this allows you to easily download ARTE+7 videos and watch them later.
+If you often travel with poor Internet connections, now you can download videos to watch them later.
 
-**Why ARTE+7?**
+**Why www.ARTE.tv ?**
 
-ARTE channel is an amazing place for culture. I don't have a TV at home and ARTE+7 is my only way to watch those programs after they've been live.
+ARTE is an amazing place for culture. If you don't have a TV : ARTE website is the only way to watch it.
 
-WARNING
+About ARTE: http://www.arte.tv/sites/en/arte-europe/about/
+
+TV Broadcast: http://reception.arte.tv/
+
+
+DISCLAIMER
 -------
 
-Remember that this script is for personal use only. I'm not responsible for any usage which could be against ARTE+7 privacy policy.
+This script is for personal use only. You alone have the responsability for any usage which could be against ARTE privacy policy.
