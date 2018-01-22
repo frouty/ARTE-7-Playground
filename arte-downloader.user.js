@@ -347,8 +347,9 @@ function findPlayerJson(videoElement, videoElementIndex) {
 
 function findPlayers() {
     // Check playlist
-    playlistJson = unescape(window.location.href.split("json_playlist_url=")[1])
-    if (playlistJson !== "undefined") {
+    playlistJson = /playlist_url=([^&]+)/.exec(window.location.href);
+    if (playlistJson != null) {
+        playlistJson=unescape(playlistJson[1]);
         console.log("> Found playlist json: " + playlistJson)
         console.log()
         videoPlayerElements = parent.document.querySelectorAll("div.arte-playerfs.arte-playerfs--show");
@@ -356,9 +357,11 @@ function findPlayers() {
             method: "GET",
             url: playlistJson,
             onload: function(response) {
-                jsonUrl = JSON.parse(response.responseText)["videos"][0]["jsonUrl"];
-                jsonUrl = jsonUrl.replace(/\\/g, ''); // remove backslashes from the URL
-                if (jsonUrl !== undefined) {
+                jsonUrl = JSON.parse(response.responseText);
+                //check whether exists a valid entry
+                if(typeof jsonUrl["videos"]!=="undefined" && typeof jsonUrl["videos"][0]!=="undefined") {
+                    jsonUrl = jsonUrl["videos"][0]["jsonUrl"];
+                    jsonUrl = jsonUrl.replace(/\\/g, ''); // remove backslashes from the URL
                     parsePlayerJson(jsonUrl, videoPlayerElements[0], 0);
                 }
             }
